@@ -31,10 +31,10 @@ def send_to_specific_company(unFichier):
     unFichierOrigine = unFichier.split('_')[-1]
     nomEntreprise = unFichierOrigine[:-4] #Retrieve the company name from the file name
 
-    combinaison = [unFichier, r"Plaquette_OpportunityDay.pdf"]
+    combinaison = [unFichier, r"Plaquette.pdf"]
 
     #Mail object
-    subject = "Proposition de partenariat " + nomEntreprise + " - BDE IT SUD PARIS"
+    subject = "Partnership proposition " + nomEntreprise + " - BDE"
     msg['Subject'] = subject
     textPart = MIMEText(texte, "html")
     msg.attach(textPart)
@@ -69,10 +69,10 @@ def send_to_multiple_companies(chemin):
     
 
     for fi in range(len(listeFichiersPresentation)):
-        combinaison = [listeFichiersPresentation[fi], r"Plaquette_OpportunityDay.pdf"]
+        combinaison = [listeFichiersPresentation[fi], r"Plaquette.pdf"]
 
         #Mail object
-        subject = "Proposition de partenariat " + companyName[fi] + " - BDE IT SUD PARIS"
+        subject = "Partnership proposition " + companyName[fi] + " - BDE"
         msg['Subject'] = subject
 
         attachment = MIMEApplication(open(r"directory_path_containing_partnership_proposal" + listeFichiersPresentation[fi], "rb").read())
