@@ -1,5 +1,5 @@
 # mailAutomation
-This file was used when I was a Business Developer for the student association of my engineering school, Telecom SudParis.
+This file was used when I was a Business Developer for the student association of my engineering school, xxx.
 I used this for sending brochure and slide presentation to the partners.
 
 When using the SMTP connection, you need to add the address of the server and then configure your email and your password.
